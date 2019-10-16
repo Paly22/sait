@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="bxslider/jquery.bxslider.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="bxslider/jquery.bxslider.min.js"></script>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/update.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="style1.css" >
+
+
+    <title>MetroCraft</title>
+    <?
+wp_enqueue_script('cookie', get_template_directory_uri() . '/js/jquery.cookie.js', 'jquery', false);
+wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', 'jquery', false);
+?>
+</head>
+<body bgcolor="#292824">
+<style>
+body { background: url(images/fonbana.jpg); } 
+</style>
+
+
+<header>
+        <div class="box nav">
+          <ul class="navmenu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="vopr.html">Вопросы</a></li>
+            <li><a href="pravila.html">Правила</a></li>
+			 <li><a href="https://vk.com/themetrocraft">Наш ВК</a></li>
+			 <li><a href="viki.html">Вики</a></li>
+			 <li><a href="https://discord.gg/JyTs8qh">Наш Дискорд</a></li>
+       <li><a href="ban.html">Бан лист</a></li>
+       <li><a href="https://drive.google.com/open?id=1ANfD7pql3hsUZYP2uu_ZwuXYO3rN-gjI">Скачать</a></li>
+           </ul>
+        </div>
+      </header>
+  <br/>
+    <br/>
+
+
+<center>
+<table>
+  <thead>
+    <tr>
+      <td>№</td>
+      <td>Ник</td>
+      <td>Причина</td>
+      <td>Автор</td>
+      <td>Время</td>
+      <td>До</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     <td></td>
+    </tr>
+    <tr>
+    <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     <td></td>
+    </tr>
+    <tr>
+     <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     <td></td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+
+
+
+	<div id="loop">
+    <?php while(have_posts()) : the_post(); ?>
+        <div class="post">
+            
+            <?php the_excerpt(); ?>   
+            
+        </div>    
+    <?php endwhile; ?>
+    <div id="pagination"><?php next_posts_link(__('Показать еще')); ?></div>
+</div>
+</body>
+</html>
